@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>HTML Tutorial</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="w3school.css">
+<script>
+// test
+</script>
+</head>
+<body>
+<script>
+window.onload = function() {
+// Create tags.
+    var h2TagOne = document.createElement('h2');
+    var h2TagTwo = document.createElement('h2');
+    var anchorBody = document.createElement('a');
+    var brTags = document.createElement('br');
+
+// Builds the basic.
+    var bodySelf = document.getElementById('wrap');
+    for (var i = 0; i < 8; i++) {
+        var divBody = document.createElement('div');
+        bodySelf.appendChild(divBody);
+    }
+    var divAll = document.querySelectorAll('div');
+    divAll[1].appendChild(anchorBody);
+    divAll[7].appendChild(anchorBody);
+    //Adds h2 tags and appends those and adds className.
+    divAll[4].appendChild(h2TagOne);
+    divAll[8].appendChild(h2TagTwo);
+    var h2Tags = document.querySelectorAll('h2');
+    h2Tags[0].classList.add('subtitle');
+    h2Tags[1].classList.add('left');
+
+// Adds anchors to right place for 47 anchors.
+    for (var i = 0; i < 47; i++) {
+        if(i <= 12){
+            var anchorBody = document.createElement('a');
+            divAll[2].appendChild(anchorBody);
+        }
+        if(i > 13){
+            var anchorNav = document.createElement('a');
+            anchorNav.classList.add('breakLine');
+            divAll[8].appendChild(anchorNav);
+        }
+    }
+
+// Adds h2 attrs.
+    var h2HTML = document.querySelectorAll('h2');
+    h2HTML[0].innerHTML = 'HTML The classAttribute';
+    h2HTML[1].innerHTML = '<span class="left_h2">HTML5</span>Tutorial';
+
+// Adds div attrs.
+    //divAll[1].classList.add('w3-container', 'top');
+    divAll[2].classList.add('w3-card-2', 'topnav', 'notranslate');
+    divAll[3].classList.add('AD');
+    divAll[6].classList.add('document');
+    divAll[6].innerHTML = '<h1>Using The class Attribute</h1>';
+    divAll[7].classList.add('paragraph');
+    divAll[8].classList.add('sidemenu');
+    divAll[7].innerHTML = '<p>W3Schools is optimized for learning, testing, and training. Examples <br>might be simplified to improve reading and<br>basic understanding. </p>';
+
+// Adds anchors attrs.
+    var anchors = document.querySelectorAll('a');
+    var commonUrl = 'default.asp';
+    anchors[0].classList.add('w3schools-logo', 'notranslate');
+    anchors[1].href = './';
+    anchors[1].innerHTML = '<img src="home.jpg"　width="10" height="20">';
+    anchors[2].href = '/html/' + commonUrl;
+    anchors[2].innerHTML = 'HTML';
+    anchors[3].href = '/css/' + commonUrl;
+    anchors[3].innerHTML = 'CSS';
+    anchors[4].href = '/js/' + commonUrl;
+    anchors[4].innerHTML = 'JAVASCRIPT';
+    anchors[5].href = '/sql/' + commonUrl;
+    anchors[5].innerHTML = 'SQL';
+    anchors[6].href = '/php/' + commonUrl;
+    anchors[6].innerHTML = 'PHP';
+    anchors[7].href = '/bootstrap/' + commonUrl;
+    anchors[7].innerHTML = 'BOOTSTRAP';
+    anchors[8].href = '/howto/' + commonUrl;
+    anchors[8].innerHTML = 'HOW TO';
+    anchors[9].href = '/python/' + commonUrl;
+    anchors[9].innerHTML = 'PYTHON';
+    anchors[10].href = '/w3css/' + commonUrl;
+    anchors[10].innerHTML = 'W3.CSS'
+    anchors[11].href = '/jquery/' + commonUrl;
+    anchors[11].innerHTML = 'JQUERY';
+    anchors[12].href = '/xml/' + commonUrl;
+    anchors[12].innerHTML = 'XML';
+    anchors[13].href = 'https://www.yahoo.co.jp/';
+    anchors[13].innerHTML = 'advertisement';
+    anchors[14].classList.add('button');
+    anchors[14].innerHTML = 'Previous';
+    anchors[15].href = '/default.asp'
+    anchors[15].innerHTML = 'HTML HOME';
+    anchors[16].href = '/html_intro.asp'
+    anchors[16].innerHTML = 'HTML Introduction';
+    anchors[17].href = '/html_editors.asp'
+    anchors[17].innerHTML = 'HTML Editors';
+    anchors[18].href = 'html_basic.asp';
+    anchors[18].innerHTML = 'HTML Basic';
+    anchors[19].href = 'html_elements.asp';
+    anchors[19].innerHTML = 'HTML Elements';
+    anchors[20].href = 'html_attributes.asp';
+    anchors[20].innerHTML = 'HTML Attributes';
+    anchors[21].href = 'html_headings.asp';
+    anchors[21].innerHTML = 'HTML Headings';
+    anchors[22].href = 'html_paragraphs.asp';
+    anchors[22].innerHTML = 'HTML Paragraphs';        
+    anchors[23].href = 'html_styles.asp';
+    anchors[23].innerHTML = 'HTML Styles';
+    anchors[24].href = 'html_formatting.asp';
+    anchors[24].innerHTML = 'HTML Formatting';
+    anchors[25].href = 'html_quotation_elements.asp';
+    anchors[25].innerHTML = 'HTML Quotations';
+    anchors[26].href = 'html_comments.asp';
+    anchors[26].innerHTML = 'HTML Comments';
+    anchors[27].href = 'html_colors.asp';
+    anchors[27].innerHTML = 'HTML Colors';
+    anchors[28].href = 'html_css.asp';
+    anchors[28].innerHTML = 'HTML CSS';
+    anchors[29].innerHTML = 'HTML Links';
+    anchors[30].href = 'html_images.asp';
+    anchors[30].innerHTML = 'HTML Images';    
+    anchors[31].href = 'html_tables.asp';
+    anchors[31].innerHTML = 'HTML Tables';
+    anchors[32].href = 'html_lists.asp';
+    anchors[32].innerHTML = 'HTML Lists';
+    anchors[33].href = 'html_blocks.asp';
+    anchors[33].innerHTML = 'HTML Blocks';
+    anchors[34].href = 'html_classes.asp';
+    anchors[34].innerHTML = 'HTML Classes';
+    anchors[35].href = 'html_id.asp';
+    anchors[35].innerHTML = 'HTML ID';
+    anchors[36].href = 'html_iframe.asp';
+    anchors[36].innerHTML = 'HTML IFframe';
+    anchors[37].href = 'html_scripts.asp';
+    anchors[37].innerHTML = 'HTML Scripts';
+    anchors[38].href = 'html_filepaths.asp';
+    anchors[38].innerHTML = 'HTML Filepath';
+    anchors[39].href = 'html_head.asp';
+    anchors[39].innerHTML = 'HTML Head';
+    anchors[40].href = 'html_layout.asp';
+    anchors[40].innerHTML = 'HTML Layout';
+    anchors[41].href = 'html_responsive.asp';
+    anchors[41].innerHTML = 'HTML Responsive';
+    anchors[42].href = 'html_computercode_elements.asp';
+    anchors[42].innerHTML = 'HTML Comuputer';
+    anchors[43].href = 'html_entities.asp';
+    anchors[43].innerHTML = 'HTML Entities';
+    anchors[44].href = 'html_symbols.asp';
+    anchors[44].innerHTML = 'HTML Symbols';
+    anchors[45].href = 'html_charset.asp';
+    anchors[45].innerHTML = 'HTML Charset';
+    anchors[46].href = 'html_urlencode.asp';
+    anchors[46].innerHTML = 'HTML URL Encode';
+    anchors[47].href = 'html_xhtml.asp';
+    anchors[47].innerHTML = 'HTML XHTML';
+};
+</script>
+<div id='wrap'>
+
+</div>
+</body>
+</html>
